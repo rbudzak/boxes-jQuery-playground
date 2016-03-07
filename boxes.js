@@ -23,5 +23,16 @@ $(document).ready(function(){
     e.preventDefault();
     alert("YOU SHALL NOT PASS!");
   });
-
+  $('.box').click(function (e){
+    if ($(this).css('background-image') === "none"){
+      $(this).css('background-image', 'url(image/cutePuppy.jpg)').css('background-size', 'cover');  
+    }
+    else{
+      $(this).css('background-image', '');
+    }
+  });
+  $('#container').click(function (e){
+    e.target.style.backgroundColor = "white";
+    $(this).css('background-color', 'black');
+  });
 });
